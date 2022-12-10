@@ -1,0 +1,12 @@
+
+State Machine - |atm_machine|state
+Name state.PIN_CHANGE state.WITHDRAWAL state.DEPOSIT state.READY state.PIN_ATTEMPT_3 state.PIN_ATTEMPT_2 state.PIN_ATTEMPT_1 state.ENTER_PIN state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 
+state.ENTER_PIN 0 0 0 0 0 0 0 1 1 
+state.PIN_ATTEMPT_1 0 0 0 0 0 0 1 0 1 
+state.PIN_ATTEMPT_2 0 0 0 0 0 1 0 0 1 
+state.PIN_ATTEMPT_3 0 0 0 0 1 0 0 0 1 
+state.READY 0 0 0 1 0 0 0 0 1 
+state.DEPOSIT 0 0 1 0 0 0 0 0 1 
+state.WITHDRAWAL 0 1 0 0 0 0 0 0 1 
+state.PIN_CHANGE 1 0 0 0 0 0 0 0 1 

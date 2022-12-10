@@ -1,0 +1,545 @@
+Analysis & Synthesis report for atm_machine
+Sat Dec 10 18:49:40 2022
+Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. State Machine - |atm_machine|state
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Port Connectivity Checks: "encryption:ENCRYPT_PIN"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Dec 10 18:49:40 2022       ;
+; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
+; Revision Name                   ; atm_machine                                 ;
+; Top-level Entity Name           ; atm_machine                                 ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 1009                                        ;
+; Total pins                      ; 750                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 14                                          ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; atm_machine        ; atm_machine        ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processors 8-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                      ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                                                               ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; setor.vhd                        ; yes             ; User VHDL File  ; C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/setor.vhd          ;         ;
+; pin_changer.vhd                  ; yes             ; User VHDL File  ; C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/pin_changer.vhd    ;         ;
+; Penarikan.vhd                    ; yes             ; User VHDL File  ; C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/Penarikan.vhd      ;         ;
+; encryption.vhd                   ; yes             ; User VHDL File  ; C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd     ;         ;
+; atm_prototypes.vhd               ; yes             ; User VHDL File  ; C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_prototypes.vhd ;         ;
+; atm_machine.vhd                  ; yes             ; User VHDL File  ; C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine.vhd    ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 943       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 1226      ;
+;     -- 7 input functions                    ; 1         ;
+;     -- 6 input functions                    ; 450       ;
+;     -- 5 input functions                    ; 174       ;
+;     -- 4 input functions                    ; 168       ;
+;     -- <=3 input functions                  ; 433       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 1009      ;
+;                                             ;           ;
+; I/O pins                                    ; 750       ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 14        ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 1009      ;
+; Total fan-out                               ; 9777      ;
+; Average fan-out                             ; 2.61      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                       ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Entity Name ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+-------------+--------------+
+; |atm_machine                 ; 1226 (584)          ; 1009 (937)                ; 0                 ; 14         ; 750  ; 0            ; |atm_machine                         ; atm_machine ; work         ;
+;    |Penarikan:WITHDRAW_PROC| ; 221 (221)           ; 36 (36)                   ; 0                 ; 14         ; 0    ; 0            ; |atm_machine|Penarikan:WITHDRAW_PROC ; Penarikan   ; work         ;
+;    |setor:DEPOSIT_PROC|      ; 421 (421)           ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |atm_machine|setor:DEPOSIT_PROC      ; setor       ; work         ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary    ;
++-----------------------------------+-------------+
+; Statistic                         ; Number Used ;
++-----------------------------------+-------------+
+; Two Independent 18x18             ; 7           ;
+; Independent 18x18 plus 36         ; 7           ;
+; Total number of DSP blocks        ; 14          ;
+;                                   ;             ;
+; Fixed Point Unsigned Multiplier   ; 7           ;
+; Fixed Point Mixed Sign Multiplier ; 7           ;
++-----------------------------------+-------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |atm_machine|state                                                                                                                                                       ;
++---------------------+------------------+------------------+---------------+-------------+---------------------+---------------------+---------------------+-----------------+------------+
+; Name                ; state.PIN_CHANGE ; state.WITHDRAWAL ; state.DEPOSIT ; state.READY ; state.PIN_ATTEMPT_3 ; state.PIN_ATTEMPT_2 ; state.PIN_ATTEMPT_1 ; state.ENTER_PIN ; state.IDLE ;
++---------------------+------------------+------------------+---------------+-------------+---------------------+---------------------+---------------------+-----------------+------------+
+; state.IDLE          ; 0                ; 0                ; 0             ; 0           ; 0                   ; 0                   ; 0                   ; 0               ; 0          ;
+; state.ENTER_PIN     ; 0                ; 0                ; 0             ; 0           ; 0                   ; 0                   ; 0                   ; 1               ; 1          ;
+; state.PIN_ATTEMPT_1 ; 0                ; 0                ; 0             ; 0           ; 0                   ; 0                   ; 1                   ; 0               ; 1          ;
+; state.PIN_ATTEMPT_2 ; 0                ; 0                ; 0             ; 0           ; 0                   ; 1                   ; 0                   ; 0               ; 1          ;
+; state.PIN_ATTEMPT_3 ; 0                ; 0                ; 0             ; 0           ; 1                   ; 0                   ; 0                   ; 0               ; 1          ;
+; state.READY         ; 0                ; 0                ; 0             ; 1           ; 0                   ; 0                   ; 0                   ; 0               ; 1          ;
+; state.DEPOSIT       ; 0                ; 0                ; 1             ; 0           ; 0                   ; 0                   ; 0                   ; 0               ; 1          ;
+; state.WITHDRAWAL    ; 0                ; 1                ; 0             ; 0           ; 0                   ; 0                   ; 0                   ; 0               ; 1          ;
+; state.PIN_CHANGE    ; 1                ; 0                ; 0             ; 0           ; 0                   ; 0                   ; 0                   ; 0               ; 1          ;
++---------------------+------------------+------------------+---------------+-------------+---------------------+---------------------+---------------------+-----------------+------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1009  ;
+; Number of registers using Synchronous Clear  ; 58    ;
+; Number of registers using Synchronous Load   ; 141   ;
+; Number of registers using Asynchronous Clear ; 11    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 990   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; MONEY_OUT[0]~reg0                       ; 1       ;
+; MONEY_OUT[31]~reg0                      ; 1       ;
+; setor:DEPOSIT_PROC|temp_return[0]       ; 2       ;
+; setor:DEPOSIT_PROC|temp_return[31]      ; 9       ;
+; pinAcc4[0][1]                           ; 1       ;
+; pinAcc4[1][3]                           ; 1       ;
+; pinAcc4[5][0]                           ; 1       ;
+; pinAcc4[4][1]                           ; 1       ;
+; pinAcc4[2][3]                           ; 1       ;
+; pinAcc3[5][2]                           ; 1       ;
+; pinAcc3[3][1]                           ; 1       ;
+; pinAcc3[4][1]                           ; 1       ;
+; pinAcc3[0][2]                           ; 1       ;
+; pinAcc3[2][1]                           ; 1       ;
+; pinAcc3[2][0]                           ; 1       ;
+; pinAcc3[4][0]                           ; 1       ;
+; pinAcc3[4][2]                           ; 1       ;
+; pinAcc3[3][2]                           ; 1       ;
+; pinAcc2[0][1]                           ; 1       ;
+; pinAcc2[1][1]                           ; 1       ;
+; pinAcc2[5][0]                           ; 1       ;
+; pinAcc2[0][0]                           ; 1       ;
+; pinAcc2[0][2]                           ; 1       ;
+; pinAcc2[4][2]                           ; 1       ;
+; pinAcc2[3][0]                           ; 1       ;
+; pinAcc2[3][2]                           ; 1       ;
+; pinAcc1[5][3]                           ; 1       ;
+; pinAcc1[3][1]                           ; 1       ;
+; pinAcc1[4][1]                           ; 1       ;
+; pinAcc1[0][0]                           ; 1       ;
+; pinAcc1[1][2]                           ; 1       ;
+; pinAcc1[2][1]                           ; 1       ;
+; pinAcc1[2][0]                           ; 1       ;
+; pinAcc1[4][0]                           ; 1       ;
+; pinAcc1[4][2]                           ; 1       ;
+; pinAcc1[3][2]                           ; 1       ;
+; balance_database[3][4]                  ; 2       ;
+; balance_database[0][7]                  ; 7       ;
+; balance_database[3][7]                  ; 2       ;
+; balance_database[1][7]                  ; 2       ;
+; balance_database[3][6]                  ; 2       ;
+; balance_database[0][5]                  ; 8       ;
+; balance_database[1][13]                 ; 3       ;
+; balance_database[1][12]                 ; 2       ;
+; balance_database[1][11]                 ; 2       ;
+; balance_database[0][10]                 ; 8       ;
+; balance_database[3][10]                 ; 2       ;
+; balance_database[0][9]                  ; 8       ;
+; balance_database[3][9]                  ; 2       ;
+; balance_database[3][8]                  ; 2       ;
+; balance_database[0][16]                 ; 8       ;
+; balance_database[1][16]                 ; 2       ;
+; balance_database[0][15]                 ; 8       ;
+; Total number of inverted registers = 53 ;         ;
++-----------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; 3:1                ; 30 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |atm_machine|MONEY_OUT[24]~reg0                 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |atm_machine|setor:DEPOSIT_PROC|temp_return[2]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |atm_machine|Penarikan:WITHDRAW_PROC|wd_sum[30] ;
+; 5:1                ; 26 bits   ; 78 LEs        ; 0 LEs                ; 78 LEs                 ; Yes        ; |atm_machine|balance_database[0][22]            ;
+; 5:1                ; 27 bits   ; 81 LEs        ; 0 LEs                ; 81 LEs                 ; Yes        ; |atm_machine|balance_database[1][25]            ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |atm_machine|balance_database[2][22]            ;
+; 5:1                ; 26 bits   ; 78 LEs        ; 0 LEs                ; 78 LEs                 ; Yes        ; |atm_machine|balance_database[3][16]            ;
+; 11:1               ; 26 bits   ; 182 LEs       ; 130 LEs              ; 52 LEs                 ; Yes        ; |atm_machine|setor:DEPOSIT_PROC|temp_return[21] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |atm_machine|MONEY_OUT[31]~reg0                 ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |atm_machine|balance_database[0][5]             ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |atm_machine|balance_database[1][11]            ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |atm_machine|balance_database[3][7]             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |atm_machine|accountUsageIndexID[0]             ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |atm_machine|balanceUser[9]                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "encryption:ENCRYPT_PIN"                                                                           ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; encrypted_pin_code ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 1009                        ;
+;     CLR               ; 11                          ;
+;     ENA               ; 791                         ;
+;     ENA SCLR          ; 58                          ;
+;     ENA SLD           ; 141                         ;
+;     plain             ; 8                           ;
+; arriav_lcell_comb     ; 1228                        ;
+;     arith             ; 261                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 196                         ;
+;         5 data inputs ; 64                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 838                         ;
+;         1 data inputs ; 34                          ;
+;         2 data inputs ; 28                          ;
+;         3 data inputs ; 48                          ;
+;         4 data inputs ; 168                         ;
+;         5 data inputs ; 110                         ;
+;         6 data inputs ; 450                         ;
+;     shared            ; 128                         ;
+;         2 data inputs ; 32                          ;
+;         3 data inputs ; 96                          ;
+; arriav_mac            ; 14                          ;
+; boundary_port         ; 750                         ;
+;                       ;                             ;
+; Max LUT depth         ; 10.00                       ;
+; Average LUT depth     ; 6.23                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:05     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+    Info: Processing started: Sat Dec 10 18:49:24 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off atm_machine -c atm_machine
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file setor.vhd
+    Info (12022): Found design unit 1: setor-rtl File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/setor.vhd Line: 18
+    Info (12023): Found entity 1: setor File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/setor.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file pin_changer.vhd
+    Info (12022): Found design unit 1: pin_changer-rtl File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/pin_changer.vhd Line: 16
+    Info (12023): Found entity 1: pin_changer File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/pin_changer.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file penarikan.vhd
+    Info (12022): Found design unit 1: Penarikan-behavior_penarikan File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/Penarikan.vhd Line: 18
+    Info (12023): Found entity 1: Penarikan File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/Penarikan.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file encryption.vhd
+    Info (12022): Found design unit 1: encryption-behavioral File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 20
+    Info (12023): Found entity 1: encryption File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 10
+Info (12021): Found 2 design units, including 0 entities, in source file atm_prototypes.vhd
+    Info (12022): Found design unit 1: atm_prototypes File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_prototypes.vhd Line: 7
+    Info (12022): Found design unit 2: atm_prototypes-body File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_prototypes.vhd Line: 46
+Info (12021): Found 2 design units, including 1 entities, in source file atm_machine.vhd
+    Info (12022): Found design unit 1: atm_machine-rtl File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine.vhd Line: 30
+    Info (12023): Found entity 1: atm_machine File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine.vhd Line: 8
+Info (12127): Elaborating entity "atm_machine" for the top level hierarchy
+Warning (10540): VHDL Signal Declaration warning at atm_machine.vhd(43): used explicit default value for signal "passwordCollection" because signal was never assigned a value File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine.vhd Line: 43
+Warning (10036): Verilog HDL or VHDL warning at atm_machine.vhd(45): object "encryptedPin" assigned a value but never read File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine.vhd Line: 45
+Info (12128): Elaborating entity "encryption" for hierarchy "encryption:ENCRYPT_PIN" File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine.vhd Line: 114
+Warning (10540): VHDL Signal Declaration warning at encryption.vhd(34): used explicit default value for signal "secret_key" because signal was never assigned a value File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 34
+Warning (10492): VHDL Process Statement warning at encryption.vhd(112): signal "shift_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 112
+Warning (10492): VHDL Process Statement warning at encryption.vhd(113): signal "K1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 113
+Warning (10492): VHDL Process Statement warning at encryption.vhd(114): signal "K1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 114
+Warning (10492): VHDL Process Statement warning at encryption.vhd(115): signal "K2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 115
+Warning (10492): VHDL Process Statement warning at encryption.vhd(116): signal "K2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 116
+Warning (10492): VHDL Process Statement warning at encryption.vhd(117): signal "shift_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 117
+Warning (10492): VHDL Process Statement warning at encryption.vhd(118): signal "K1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 118
+Warning (10492): VHDL Process Statement warning at encryption.vhd(119): signal "K1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 119
+Warning (10492): VHDL Process Statement warning at encryption.vhd(120): signal "K1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 120
+Warning (10492): VHDL Process Statement warning at encryption.vhd(121): signal "K2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 121
+Warning (10492): VHDL Process Statement warning at encryption.vhd(122): signal "K2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 122
+Warning (10492): VHDL Process Statement warning at encryption.vhd(123): signal "K2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 123
+Warning (10492): VHDL Process Statement warning at encryption.vhd(130): signal "shift_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 130
+Warning (10492): VHDL Process Statement warning at encryption.vhd(131): signal "rotated_K1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 131
+Warning (10492): VHDL Process Statement warning at encryption.vhd(133): signal "rotated_K2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 133
+Warning (10492): VHDL Process Statement warning at encryption.vhd(137): signal "key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 137
+Warning (10492): VHDL Process Statement warning at encryption.vhd(138): signal "key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 138
+Warning (10631): VHDL Process Statement warning at encryption.vhd(36): inferring latch(es) for signal or variable "rotated_K1", which holds its previous value in one or more paths through the process File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Warning (10631): VHDL Process Statement warning at encryption.vhd(36): inferring latch(es) for signal or variable "rotated_K2", which holds its previous value in one or more paths through the process File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[0]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[1]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[2]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[3]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[4]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[5]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[6]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[7]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[8]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[9]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[10]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[11]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[12]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[13]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[14]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[15]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[16]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[17]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[18]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[19]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[20]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[21]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[22]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[23]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[24]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[25]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[26]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K2[27]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[0]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[1]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[2]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[3]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[4]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[5]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[6]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[7]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[8]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[9]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[10]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[11]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[12]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[13]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[14]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[15]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[16]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[17]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[18]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[19]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[20]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[21]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[22]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[23]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[24]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[25]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[26]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (10041): Inferred latch for "rotated_K1[27]" at encryption.vhd(36) File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd Line: 36
+Info (12128): Elaborating entity "pin_changer" for hierarchy "pin_changer:CHANGING_PIN" File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine.vhd Line: 115
+Warning (10492): VHDL Process Statement warning at pin_changer.vhd(22): signal "NEW_PIN_INPUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/pin_changer.vhd Line: 22
+Info (12128): Elaborating entity "setor" for hierarchy "setor:DEPOSIT_PROC" File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine.vhd Line: 116
+Info (12128): Elaborating entity "Penarikan" for hierarchy "Penarikan:WITHDRAW_PROC" File: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine.vhd Line: 117
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 2880 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 718 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 2116 logic cells
+    Info (21062): Implemented 14 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 4957 megabytes
+    Info: Processing ended: Sat Dec 10 18:49:40 2022
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:17
+
+

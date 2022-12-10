@@ -1,0 +1,80 @@
+{C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/Penarikan.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/Penarikan.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package atm_prototypes
+-- Compiling entity Penarikan
+-- Compiling architecture behavior_penarikan of Penarikan
+
+} {} {}} {C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/setor.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/setor.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity setor
+-- Compiling architecture rtl of setor
+
+} {} {}} {C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/pin_changer.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/pin_changer.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package atm_prototypes
+-- Compiling entity pin_changer
+-- Compiling architecture rtl of pin_changer
+
+} {} {}} {C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine.vhd} {2 {vcom -work work -2002 -explicit -stats=none {C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package atm_prototypes
+-- Compiling entity atm_machine
+-- Compiling architecture rtl of atm_machine
+** Warning: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine.vhd(43): (vcom-1013) Initial value of "passwordCollection" depends on value of signal "pinAcc1".
+** Warning: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine.vhd(43): (vcom-1013) Initial value of "passwordCollection" depends on value of signal "pinAcc2".
+** Warning: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine.vhd(43): (vcom-1013) Initial value of "passwordCollection" depends on value of signal "pinAcc3".
+** Warning: C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine.vhd(43): (vcom-1013) Initial value of "passwordCollection" depends on value of signal "pinAcc4".
+
+} {} {}} {C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_prototypes.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_prototypes.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling package atm_prototypes
+-- Compiling package body atm_prototypes
+-- Loading package atm_prototypes
+
+} {} {}} {C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package MATH_REAL
+-- Loading package atm_prototypes
+-- Compiling entity encryption
+-- Compiling architecture behavioral of encryption
+
+} {} {}}

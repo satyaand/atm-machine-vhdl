@@ -23,4 +23,4 @@ Di proyek ini kami menciptakan ATM yang dapat melakukan penyetoran dan penarikan
 ```
 
 ## State Diagram
-![State Diagram](https://drive.google.com/file/d/1YnqgZwbPYb-U-LKxIgehy_YIs6JxD88m/view?usp=share_link)
+![State Diagram](FSM_synthesized.jpg)

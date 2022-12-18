@@ -24,3 +24,6 @@ Di proyek ini kami menciptakan ATM yang dapat melakukan penyetoran dan penarikan
 
 ## State Diagram
 ![State Diagram](FSM_synthesized.jpg)
+
+## Link Video Penjelasan
+https://youtu.be/82NdxXIPKdA

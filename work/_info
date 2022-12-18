@@ -18,7 +18,7 @@ Z4 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
 Z5 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 228
+!i122 246
 Z8 dC:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl
 Z9 8C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine.vhd
 Z10 FC:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine.vhd
@@ -28,9 +28,9 @@ VA[DKSnSG0BzNUXikl0QIF1
 !s100 Z8ECmV<B4i^QG87_gXT150
 Z11 OV;C;2020.1;71
 32
-Z12 !s110 1670677080
+Z12 !s110 1671007316
 !i10b 1
-Z13 !s108 1670677079.000000
+Z13 !s108 1671007316.000000
 Z14 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine.vhd|
 Z15 !s107 C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine.vhd|
 !i113 1
@@ -45,7 +45,7 @@ R5
 R6
 R7
 DEx4 work 11 atm_machine 0 22 A[DKSnSG0BzNUXikl0QIF1
-!i122 228
+!i122 246
 l100
 L30 250
 V0ZYczDnZ]San2JjESIZMg1
@@ -61,7 +61,7 @@ R15
 R16
 R17
 Eatm_machine_tb
-Z18 w1670677734
+Z18 w1670677900
 R1
 R2
 R3
@@ -69,7 +69,7 @@ R4
 R5
 R6
 R7
-!i122 237
+!i122 251
 R8
 Z19 8C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine_tb.vhd
 Z20 FC:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine_tb.vhd
@@ -79,9 +79,9 @@ VES]EU7EL2M@UZa684DjUV1
 !s100 fW1z0XgCIik@K<ZYjX]bL2
 R11
 32
-Z21 !s110 1670677742
+Z21 !s110 1671007317
 !i10b 1
-Z22 !s108 1670677742.000000
+Z22 !s108 1671007317.000000
 Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine_tb.vhd|
 Z24 !s107 C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_machine_tb.vhd|
 !i113 1
@@ -96,11 +96,11 @@ R5
 R6
 R7
 Z25 DEx4 work 14 atm_machine_tb 0 22 ES]EU7EL2M@UZa684DjUV1
-!i122 237
+!i122 251
 l53
 Z26 L11 63
-Vj_1UQ2TSJ7S_1Ii91e3NW1
-!s100 DR0aUzKh4NnfPSJ@gM5^@0
+Z27 VE>kY6EBRo0MHWdd6F_Z`01
+Z28 !s100 5e@DTkJF0SHKai9Z13X0E3
 R11
 32
 R21
@@ -118,11 +118,11 @@ R4
 R5
 R6
 R7
-!i122 229
-Z27 w1670666136
+!i122 247
+Z29 w1670666136
 R8
-Z28 8C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_prototypes.vhd
-Z29 FC:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_prototypes.vhd
+Z30 8C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_prototypes.vhd
+Z31 FC:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_prototypes.vhd
 l0
 L7 1
 Vd1Hn?JmQ3[D:[^A5Dz8_g3
@@ -131,9 +131,9 @@ R11
 32
 R12
 !i10b 1
-Z30 !s108 1670677080.000000
-Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_prototypes.vhd|
-Z32 !s107 C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_prototypes.vhd|
+R13
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_prototypes.vhd|
+Z33 !s107 C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/atm_prototypes.vhd|
 !i113 1
 R16
 R17
@@ -145,7 +145,7 @@ R4
 R5
 R6
 R7
-!i122 229
+!i122 247
 l0
 L46 1
 VgbcD2=8gj5^S^Oi;@>hMf3
@@ -154,14 +154,14 @@ R11
 32
 R12
 !i10b 1
-R30
-R31
+R13
 R32
+R33
 !i113 1
 R16
 R17
 Eencryption
-Z33 w1670665986
+Z34 w1670665986
 R4
 R1
 R2
@@ -169,17 +169,17 @@ R3
 R5
 R6
 R7
-!i122 227
+!i122 245
 R8
-Z34 8C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd
-Z35 FC:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd
+Z35 8C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd
+Z36 FC:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd
 l0
 L10 1
 V6F[HfEXn=L31ePBT2nW543
 !s100 Qj4ObhVEP0S6a3lTPIEg03
 R11
 32
-Z36 !s110 1670677079
+R12
 !i10b 1
 R13
 Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/encryption.vhd|
@@ -196,14 +196,14 @@ R5
 R6
 R7
 DEx4 work 10 encryption 0 22 6F[HfEXn=L31ePBT2nW543
-!i122 227
+!i122 245
 l35
 L20 124
 VS][l^b0dSG9koTHceOaSj2
 !s100 mZDYJIG^cW<;KLga`LPN93
 R11
 32
-R36
+R12
 !i10b 1
 R13
 R37
@@ -267,7 +267,7 @@ R1
 R5
 R6
 R7
-!i122 232
+!i122 250
 R8
 Z47 8C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/Penarikan.vhd
 Z48 FC:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/Penarikan.vhd
@@ -277,9 +277,9 @@ V`d@1@;>z4DiFKi6Za6=]?1
 !s100 fRB<?7FW_55`E?=PIM3Ko0
 R11
 32
-R12
+R21
 !i10b 1
-R30
+R22
 Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/Penarikan.vhd|
 Z50 !s107 C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/Penarikan.vhd|
 !i113 1
@@ -294,16 +294,16 @@ R5
 R6
 R7
 DEx4 work 9 penarikan 0 22 `d@1@;>z4DiFKi6Za6=]?1
-!i122 232
+!i122 250
 l23
 L18 53
 V`cIl2z9jko>H2<OYT;afR1
 !s100 liP_f1MHOYC4Xgibk3PL42
 R11
 32
-R12
+R21
 !i10b 1
-R30
+R22
 R49
 R50
 !i113 1
@@ -318,7 +318,7 @@ R4
 R5
 R6
 R7
-!i122 230
+!i122 248
 R8
 Z52 8C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/pin_changer.vhd
 Z53 FC:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/pin_changer.vhd
@@ -330,7 +330,7 @@ R11
 32
 R12
 !i10b 1
-R30
+R13
 Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/pin_changer.vhd|
 Z55 !s107 C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/pin_changer.vhd|
 !i113 1
@@ -345,7 +345,7 @@ R5
 R6
 R7
 DEx4 work 11 pin_changer 0 22 `QZZ6JOCHMM9VlknQ:aTd3
-!i122 230
+!i122 248
 l18
 L16 11
 V?BGoWT]8BNaZZOP_XfFbY0
@@ -354,7 +354,7 @@ R11
 32
 R12
 !i10b 1
-R30
+R13
 R54
 R55
 !i113 1
@@ -366,7 +366,7 @@ R4
 R5
 R6
 R7
-!i122 231
+!i122 249
 R8
 Z57 8C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/setor.vhd
 Z58 FC:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/setor.vhd
@@ -376,9 +376,9 @@ VZ1_b^mKG6]=<boj^<hbWX2
 !s100 WKaij3mOC5j78fz6Kmo^G3
 R11
 32
-R12
+R21
 !i10b 1
-R30
+R13
 Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/setor.vhd|
 Z60 !s107 C:/Users/Asus/Documents/Universitas Indonesia/Teknik Komputer/Semester 3/Praktikum Peranc. Sistem Digital 01/Final Project/ATM Machine/atm-machine-vhdl/setor.vhd|
 !i113 1
@@ -390,16 +390,16 @@ R5
 R6
 R7
 DEx4 work 5 setor 0 22 Z1_b^mKG6]=<boj^<hbWX2
-!i122 231
+!i122 249
 l22
 L18 57
 V0kL`CmjomPlE6:Z_`Q_Lj0
 !s100 VO4VDEXI<W8NT]o5UelAn3
 R11
 32
-R12
+R21
 !i10b 1
-R30
+R13
 R59
 R60
 !i113 1
